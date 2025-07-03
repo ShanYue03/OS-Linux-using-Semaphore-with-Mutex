@@ -13,3 +13,7 @@ Two mutexes protect shared state: one guards all accesses to queues, lane data, 
 ### Semaphore Logic:
 A counting semaphore initialized to the lane capacity (2) enforces the maximum number of cars allowed in the construction zone simultaneously. Each car thread calls sem_wait() before entering the lane, blocking if the zone is full and calls sem_post() after exiting to free a slot for others. This ensures that, regardless of how many cars or ambulances are queued, no more than two occupy the construction lane at once.
 
+Video Demo:
+https://github.com/user-attachments/assets/76de166c-d857-4544-b79c-958ed3ac253e
+
+
